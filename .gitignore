@@ -1,0 +1,3 @@
+# Local RustDesk checkouts and build output
+/rustdesk/
+/dist/

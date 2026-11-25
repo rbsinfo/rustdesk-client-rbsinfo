@@ -1,0 +1,9 @@
+{
+  "conn-type": "incoming",
+  "override-settings": {
+    "hide-powered-by-me": "Y",
+    "allow-auto-update": "N",
+    "verification-method": "use-both-passwords"
+  },
+  "default-settings": {}
+}

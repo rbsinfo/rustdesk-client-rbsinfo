@@ -1,0 +1,28 @@
+# Builds your client with the rustdesk-client generator.
+#
+# - Run it by hand from the Actions tab to get test binaries (kept as artifacts).
+# - Push a tag such as v1.0.0 to publish a GitHub release.
+name: Build client
+
+on:
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: Platforms to build (windows, linux, macos)
+        default: "windows,linux,macos"
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    # Keep the ref after "@" and `generator-ref` identical.
+    uses: sadjo/rustdesk-client/.github/workflows/build.yml@v1
+    with:
+      generator-ref: v1
+      rustdesk-version: "1.5.3"
+      targets: ${{ inputs.targets || 'windows,linux,macos' }}
+      release-tag: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || '' }}
+    secrets: inherit
