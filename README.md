@@ -1,7 +1,7 @@
 # My remote support client
 
 This repository builds a branded [RustDesk](https://github.com/rustdesk/rustdesk)
-client with [rustdesk-client](https://github.com/sadjo/rustdesk-client).
+client with [rustdesk-client](https://github.com/rbsinfo/rustdesk-client).
 
 | File | Purpose |
 | --- | --- |

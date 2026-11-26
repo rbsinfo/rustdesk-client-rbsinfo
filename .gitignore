@@ -1,3 +1,6 @@
 # Local RustDesk checkouts and build output
 /rustdesk/
 /dist/
+
+# Previous client, kept for reference
+/clients/

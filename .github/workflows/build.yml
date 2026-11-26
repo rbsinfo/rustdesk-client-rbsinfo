@@ -19,7 +19,7 @@ permissions:
 jobs:
   build:
     # Keep the ref after "@" and `generator-ref` identical.
-    uses: sadjo/rustdesk-client/.github/workflows/build.yml@v1
+    uses: rbsinfo/rustdesk-client/.github/workflows/build.yml@v1
     with:
       generator-ref: v1
       rustdesk-version: "1.5.3"
